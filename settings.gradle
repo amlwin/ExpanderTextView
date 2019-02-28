@@ -1,1 +1,1 @@
-include ':expander', ':example', ':delete'
+include ':example', ':expander'

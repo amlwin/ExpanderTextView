@@ -1,4 +1,4 @@
-package com.banner.delete;
+package com.banner.expander;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.banner.delete.test", appContext.getPackageName());
+        assertEquals("com.banner.expander.test", appContext.getPackageName());
     }
 }
