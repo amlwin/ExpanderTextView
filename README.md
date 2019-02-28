@@ -17,7 +17,7 @@ allprojects {
 On module level build.gradle
 ```
 dependencies {
-	        implementation 'com.github.BannerCoe:ExpanderTextView:v1.0.0'
+	        implementation 'com.github.BannerCoe:ExpanderTextView:v1.0.1'
 	}
 ```
 
