@@ -67,8 +67,17 @@ class ExpanderTextView(context: Context, attributeSet: AttributeSet) :
         })
     }
 
+//    Start of a string = ^ ,
+//    End of a string = $ ,
+//    regex combination = | ,
+//    Linebreak = \r\n|[\n\x0B\x0C\r\u0085\u2028\u2029]
+
     override fun setText(text: CharSequence?, type: BufferType?) {
-        this.originalText = text!!
+        this.originalText = text?.replace(
+            Regex("\n"),
+            ""
+        ) as CharSequence
+        Log.d(TAG, "original text $originalText")
         this.bufferType = type!!
         setText()
     }
@@ -97,7 +106,7 @@ class ExpanderTextView(context: Context, attributeSet: AttributeSet) :
     private fun prepareTrimText(): CharSequence {
         if (lineIndexEnd != INVALID_LINE_INDEX) {
             val trimTextIndex = lineIndexEnd - (ELLIPSIZE.length + DEFAULT_CONTINUE_TEXT.length)
-
+            Log.d(TAG, "size is ${originalText.length} and text is $originalText")
             val trimText = SpannableStringBuilder(originalText, 0, trimTextIndex)
                 .append(ELLIPSIZE)
                 .append(DEFAULT_CONTINUE_TEXT)
