@@ -17,14 +17,14 @@ allprojects {
 On module level build.gradle
 ```
 dependencies {
-	        implementation 'com.github.BannerCoe:ExpanderTextView:v1.0.1'
+	        implementation 'com.github.amlwin:ExpanderTextView:v1.0.1'
 	}
 ```
 
 Here is the things for further improvements.
 - [X] MVP ExpanderTextView
 - [X] live on **jitpack**
-- [ ] can control line count from xml and kotlin
+- [ ] can control line count from xml and programmatically
 - [ ] can change CONTINUE_TEXT (currently it's available only **Read more**).
 - [ ] can change CONTINUE_TEXT (currently it come with **Blue**).
 - [ ] a bit neat animation.
